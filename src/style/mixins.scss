@@ -1,0 +1,33 @@
+@mixin input {
+  border: 5px solid $dark-grey;
+  border-radius: 100px;
+  background-color: $dark-grey;
+  padding: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  transition: 0.2s ease-in-out;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+
+@mixin btn {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: $primary-color;
+  font-family: all-round-gothic;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

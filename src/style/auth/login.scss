@@ -1,0 +1,81 @@
+.login {
+  height: 100vh;
+  background-color: #2c2c2c;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 1fr;
+  justify-items: center;
+  align-content: start;
+
+  background-image: url("../../static/assets/concert.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    width: 50%;
+    font-size: 8rem;
+    font-weight: 700;
+    color: black;
+    align-self: center;
+    padding-left: 20px;
+  }
+
+  .login-form {
+    width: 50%;
+    height: 400px;
+    background-color: $dark-grey;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+
+    &__username,
+    &__password,
+    &__button {
+      justify-self: center;
+    }
+
+    &__username,
+    &__password {
+      input {
+        @include input();
+        background-color: $light-grey;
+        border-color: $light-grey;
+        height: 50px;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+
+    &__username {
+      align-self: flex-end;
+    }
+
+    &__button {
+      align-self: flex-start;
+      button {
+        @include btn();
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .login {
+    h1 {
+      padding: 0px;
+    }
+
+    .login-form {
+      width: auto;
+      padding: 40px;
+    }
+  }
+}

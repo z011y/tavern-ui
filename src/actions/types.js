@@ -1,0 +1,7 @@
+export const AUTH_SUCCESS = "AUTH_SUCCESS";
+export const AUTH_FAILURE = "AUTH_FAILURE";
+export const START_AUTH = "START_AUTH";
+export const LOGOUT = "LOGOUT";
+export const SET_RESULTS_VENUES = "SET_RESULTS_VENUES";
+export const SET_POPULAR_VENUES = "SET_POPULAR_VENUES";
+export const SET_CURRENT_VENUE = "SET_CURRENT_VENUE";

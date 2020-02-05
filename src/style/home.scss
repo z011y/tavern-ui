@@ -1,0 +1,93 @@
+.home {
+  background-color: $dark-grey;
+  width: 100%;
+  &__hero {
+    min-height: calc(100vh - 75px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 50px;
+
+    background-image: url(../../static/assets/hero-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+      font-size: 12rem;
+      font-weight: 200;
+      justify-self: start;
+    }
+
+    h2 {
+      color: white;
+      font-size: 8rem;
+      font-weight: 700;
+
+      b {
+        font-family: $primary-font;
+        font-weight: 700;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__overview {
+    height: calc(100vh - 75px);
+    background-color: $primary-color;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding: 50px;
+
+    h2 {
+      color: $dark-grey;
+      font-size: 8rem;
+      font-weight: 700;
+    }
+
+    button {
+      @include btn();
+      background-color: $dark-grey;
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    &__hero {
+      min-height: 100vh;
+      grid-template-rows: 1fr 2fr;
+
+      h1 {
+        font-size: 8rem;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+    }
+    &__overview {
+      h2 {
+        font-size: 4rem;
+      }
+      button {
+        height: 75px;
+        width: 150px;
+        font-size: 4rem;
+        margin-top: 75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .home {
+    min-height: 100vh;
+    &__hero {
+    }
+  }
+}
