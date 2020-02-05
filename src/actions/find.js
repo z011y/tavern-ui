@@ -15,7 +15,6 @@ export function fetchVenuesWithQuery(query) {
         }
       })
       .then(response => {
-        console.log(response.data);
         dispatch({
           type: SET_RESULTS_VENUES,
           payload: response.data
@@ -33,7 +32,6 @@ export function fetchPopularVenues() {
         }
       })
       .then(response => {
-        console.log(response.data);
         dispatch({
           type: SET_POPULAR_VENUES,
           payload: response.data
@@ -43,7 +41,6 @@ export function fetchPopularVenues() {
 }
 
 export function setCurrentVenue(name, phone, email, address) {
-  console.log(name, phone, email, address);
   return {
     type: SET_CURRENT_VENUE,
     payload: {

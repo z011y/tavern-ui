@@ -17,6 +17,7 @@ class Navbar extends Component {
 
   handle_logout = () => {
     this.props.logout();
+    history.push("/");
   };
 
   handleSearchSubmit(query) {
@@ -27,9 +28,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <div className="navbar__logo">
+        <Link to={"/"} className="navbar__logo">
           <img src={Logo} />
-        </div>
+        </Link>
         <div className="navbar__search">
           {this.props.user.logged_in ? (
             <SearchBar

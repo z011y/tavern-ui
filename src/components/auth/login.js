@@ -15,6 +15,10 @@ class Login extends Component {
     history.push("/");
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="login">

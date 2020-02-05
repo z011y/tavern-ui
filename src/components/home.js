@@ -1,8 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
+
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   constructor() {
     super();
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -18,11 +25,20 @@ class Home extends Component {
           <h2>
             Find local venues that are looking for talented musicians like you
           </h2>
-          <button>Find</button>
+          {this.props.user.logged_in ? (
+            <Link to={"/find"}>Find</Link>
+          ) : (
+            <Link to={"/login"}>Login</Link>
+          )}
         </div>
       </div>
     );
   }
 }
 
-export default Home;
+function mapStateToProps(state) {
+  const { user } = state;
+  return { user };
+}
+
+export default connect(mapStateToProps)(Home);

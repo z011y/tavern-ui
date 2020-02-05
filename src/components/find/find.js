@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import SearchBar from "./searchBar";
@@ -21,12 +21,6 @@ class Find extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
-
-  // componentWillUnmount() {
-  //   this.setState({
-  //     searchActive: false
-  //   });
-  // }
 
   render() {
     return (

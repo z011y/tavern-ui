@@ -49,10 +49,12 @@
       font-weight: 700;
     }
 
-    button {
+    a {
       @include btn();
       background-color: $dark-grey;
       color: $primary-color;
+      text-align: center;
+      line-height: 50px;
     }
   }
 }

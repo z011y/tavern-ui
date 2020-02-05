@@ -25,7 +25,9 @@ class PopularVenues extends Component {
   };
 
   render() {
-    return <div className="find__popular">{this.renderVenues()}</div>;
+    return;
+
+    <div className="find__popular">{this.renderVenues()}</div>;
   }
 }
 

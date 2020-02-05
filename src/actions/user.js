@@ -20,7 +20,6 @@ export function login({ username, password }) {
         }
       })
       .then(response => {
-        console.log(response);
         dispatch(authSuccess(response.data.user));
         localStorage.setItem("token", response.data.token);
       })
