@@ -10,43 +10,10 @@ import * as actions from "../../actions";
 import LoginForm from "./loginForm";
 
 class Login extends Component {
-  // constructor() {
-  //   super();
-  //
-  //   this.state = {
-  //     username: "",
-  //     password: "",
-  //     errorText: "",
-  //     logged_in: false
-  //   };
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.getUsers = this.getUsers.bind(this);
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  // }
-
   onSubmit = data => {
     this.props.login(data);
     history.push("/");
   };
-
-  // getUsers() {
-  //   fetch("http://localhost:8000/api/users/", {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization:
-  //         "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImNhbWVyb25jaGFybGVzXyIsImV4cCI6MTU4MDQ5NjY3MiwiZW1haWwiOiJjYW1lcm9uLm50Y0BnbWFpbC5jb20ifQ.Z1KNgo3dl1DOyGzUjiz_fcgdH3No--opsJ1C6fE-GrY"
-  //     }
-  //   }).then(response => {
-  //     localStorage.setItem("token", json.token);
-  //   });
-  // }
-
-  // handleChange(event) {
-  //   this.setState({
-  //     [event.target.name]: event.target.value,
-  //     errorText: ""
-  //   });
-  // }
 
   render() {
     return (

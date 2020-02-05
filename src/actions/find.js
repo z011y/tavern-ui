@@ -9,7 +9,7 @@ import axios from "axios";
 export function fetchVenuesWithQuery(query) {
   return function(dispatch) {
     axios
-      .get(`http://localhost:8000/venue_detail/?name=${query}`, {
+      .get(`https://api-tavern.herokuapp.com/venue_detail/?name=${query}`, {
         headers: {
           Authorization: `JWT ${localStorage.getItem("token")}`
         }
@@ -27,7 +27,7 @@ export function fetchVenuesWithQuery(query) {
 export function fetchPopularVenues() {
   return function(dispatch) {
     axios
-      .get("http://localhost:8000/venues/", {
+      .get("https://api-tavern.herokuapp.com/venues/", {
         headers: {
           Authorization: `JWT ${localStorage.getItem("token")}`
         }

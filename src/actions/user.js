@@ -12,7 +12,7 @@ export function login({ username, password }) {
   return function(dispatch) {
     dispatch(startAuth);
     axios
-      .post("http://localhost:8000/token-auth/", {
+      .post("https://api-tavern.herokuapp.com/token-auth/", {
         username: username,
         password: password,
         headers: {
