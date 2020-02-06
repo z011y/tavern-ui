@@ -1,31 +1,12 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
-import ChatRoom from "../chatRoom";
 
 import { connect } from "react-redux";
 
 class ResultsItem extends Component {
   constructor() {
     super();
-
-    this.state = {
-      chatRoom: false
-    };
-
-    this.toggleMessageComponent = this.toggleMessageComponent.bind(this);
-  }
-
-  toggleMessageComponent() {
-    if (this.state.chatRoom === false) {
-      this.setState({
-        chatRoom: true
-      });
-    } else {
-      this.setState({
-        chatRoom: false
-      });
-    }
   }
 
   componentDidMount() {
@@ -69,20 +50,3 @@ export default connect(
   mapStateToProps,
   null
 )(ResultsItem);
-
-{
-  /* <div className="results-item__description">
-  {this.props.venues.description}
-</div> */
-}
-{
-  /* {this.state.chatRoom === false ? (
-  <div
-    className={`message ${this.state.message}`}
-    onClick={this.toggleMessageComponent}
-  >
-    <FontAwesomeIcon icon={faComment} />
-  </div>
-) : (
-  <ChatRoom toggleMessageComponent={this.toggleMessageComponent} /> */
-}
