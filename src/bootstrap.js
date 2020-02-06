@@ -16,7 +16,6 @@ import Home from "./components/home";
 import Find from "./components/find/find";
 import Login from "./components/auth/login";
 import ResultsItem from "./components/find/resultsItem";
-import ChatRoom from "./components/chatRoom";
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(
   compose(
