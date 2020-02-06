@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
-import VenueImg from "../../../static/assets/venue-img.jpg";
-
 class Venue extends Component {
   constructor(props) {
     super(props);
   }
 
   handleClick() {
-    const { name, phone, email, address } = this.props;
-    this.props.setCurrentVenue(name, phone, email, address);
+    const { name, phone, email, address, img } = this.props;
+    this.props.setCurrentVenue(name, phone, email, address, img);
   }
 
   render() {
@@ -23,7 +21,7 @@ class Venue extends Component {
         className="find__item"
       >
         <h2>{this.props.name}</h2>
-        <img src={VenueImg} />
+        <img src={`../../../static/assets/${this.props.img}`} />
       </Link>
     );
   }

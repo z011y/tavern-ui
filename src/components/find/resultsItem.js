@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
-import VenueImg from "../../../static/assets/venue-img.jpg";
 import ChatRoom from "../chatRoom";
 
 import { connect } from "react-redux";
@@ -53,7 +52,7 @@ class ResultsItem extends Component {
         </div>
 
         <div className="results-item__img">
-          <img src={VenueImg} />
+          <img src={`../../../static/assets/${this.props.currentVenue.img}`} />
         </div>
       </div>
     );

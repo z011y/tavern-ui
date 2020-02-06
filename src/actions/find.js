@@ -40,14 +40,15 @@ export function fetchPopularVenues() {
   };
 }
 
-export function setCurrentVenue(name, phone, email, address) {
+export function setCurrentVenue(name, phone, email, address, img) {
   return {
     type: SET_CURRENT_VENUE,
     payload: {
       name: name,
       phone: phone,
       email: email,
-      address: address
+      address: address,
+      img: img
     }
   };
 }
