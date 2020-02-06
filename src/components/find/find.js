@@ -7,7 +7,6 @@ import * as actions from "../../actions";
 
 import ResultsVenues from "./resultsVenues";
 import PopularVenues from "./popularVenues";
-import * as images from "../../../static/assets";
 
 class Find extends Component {
   constructor(props) {

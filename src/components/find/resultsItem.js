@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 
 import { connect } from "react-redux";
+import VenueImg from "../../../static/assets/venue-img.jpg";
 
 class ResultsItem extends Component {
   constructor() {
@@ -33,7 +34,7 @@ class ResultsItem extends Component {
         </div>
 
         <div className="results-item__img">
-          <img src={`../../../static/assets/${this.props.currentVenue.img}`} />
+          <img src={VenueImg} />
         </div>
       </div>
     );

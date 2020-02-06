@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
+import VenueImg from "../../../static/assets/venue-img.jpg";
 
 class Venue extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Venue extends Component {
         className="find__item"
       >
         <h2>{this.props.name}</h2>
-        <img src={`../../../static/assets/${this.props.img}`} />
+        <img src={VenueImg} />
       </Link>
     );
   }
