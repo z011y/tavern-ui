@@ -9,11 +9,16 @@ import axios from "axios";
 export function fetchVenuesWithQuery(query) {
   return function(dispatch) {
     axios
-      .get(`https://api-tavern.herokuapp.com/venue_detail/?name=${query}`, {
-        headers: {
-          Authorization: `JWT ${localStorage.getItem("token")}`
+      .get(
+        `https://api-tavern.herokuapp.com/venue_detail/?name=${query
+          .toLowerCase()
+          .replace(/\ /g, "_")}`,
+        {
+          headers: {
+            Authorization: `JWT ${localStorage.getItem("token")}`
+          }
         }
-      })
+      )
       .then(response => {
         dispatch({
           type: SET_RESULTS_VENUES,

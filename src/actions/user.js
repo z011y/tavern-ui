@@ -22,6 +22,7 @@ export function login({ username, password }) {
       .then(response => {
         dispatch(authSuccess(response.data.user));
         localStorage.setItem("token", response.data.token);
+        history.push("/");
       })
       .catch(error => {
         console.log("an error occurred", error);

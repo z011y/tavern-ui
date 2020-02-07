@@ -7,7 +7,8 @@ import {
 
 const INITIAL_STATE = {
   user: "",
-  logged_in: localStorage.getItem("token") ? true : false
+  logged_in: localStorage.getItem("token") ? true : false,
+  error: ""
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -18,6 +19,12 @@ export default function(state = INITIAL_STATE, action) {
         ...state,
         logged_in: true,
         user: user
+      };
+    case AUTH_FAILURE:
+      const { error } = action.payload;
+      return {
+        ...state,
+        error: error
       };
     case LOGOUT:
       return {

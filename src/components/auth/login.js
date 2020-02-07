@@ -12,7 +12,6 @@ import LoginForm from "./loginForm";
 class Login extends Component {
   onSubmit = data => {
     this.props.login(data);
-    history.push("/");
   };
 
   componentDidMount() {
