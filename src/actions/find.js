@@ -12,7 +12,7 @@ export function fetchVenuesWithQuery(query) {
     query = query.toLowerCase();
     console.log(query);
     axios
-      .get(`https://api-tavern.herokuapp.com/venue_detail/?name=${query}`, {
+      .get(`https://api-tavern.herokuapp.com/venue_detail/?slug=${query}`, {
         headers: {
           Authorization: `JWT ${localStorage.getItem("token")}`
         }
