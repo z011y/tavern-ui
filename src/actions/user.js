@@ -7,6 +7,7 @@ import {
 } from "./types";
 
 import axios from "axios";
+import history from "../history";
 
 export function login({ username, password }) {
   return function(dispatch) {
